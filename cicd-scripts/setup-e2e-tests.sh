@@ -5,7 +5,7 @@
 
 # Required KUBECONFIG environment variable to run this script:
 
-set -e
+set -exo pipefail
 
 function usage() {
   echo "${0} -a ACTION [-i IMAGES]"
@@ -144,9 +144,8 @@ deploy_hub_spoke_core() {
     if [ -d "registration-operator" ]; then
         rm -rf registration-operator
     fi
-    latest_release_branch=$(git ls-remote --heads https://github.com/open-cluster-management/registration-operator.git release\* | tail -1 | cut -f 2 | cut -d '/' -f 3)
-    git clone --depth 1 -b ${latest_release_branch} https://github.com/open-cluster-management/registration-operator.git && cd registration-operator
-
+    # git clone --depth 1 -b release-2.3 https://github.com/open-cluster-management/registration-operator.git && cd registration-operator
+    git clone --depth 1 -b release-2.4 https://github.com/open-cluster-management/registration-operator.git && cd registration-operator
     export HUB_KUBECONFIG=${KUBECONFIG}
     # deploy hub and spoke via OLM
     make deploy
@@ -245,19 +244,13 @@ deploy_mco_operator() {
     # wait until mco is ready
     wait_for_deployment_ready 10 60s ${OCM_DEFAULT_NS} multicluster-observability-operator
 
-    # install minio service
     kubectl create ns ${OBSERVABILITY_NS} || true
 
-    # kubectl -n ${OBSERVABILITY_NS} apply -k ${ROOTDIR}/examples/minio
-    # echo "minio is deployed successfully."
-
-    # wait until minio is ready
-    # wait_for_deployment_ready 10 60s ${OBSERVABILITY_NS} minio
-
-    # TODO(morvencao): remove the following two extra routes after after accessing metrics from grafana url with bearer token is supported
-    temp_route=$(mktemp -d /tmp/grafana.XXXXXXXXXX)
-    # install grafana route
-    cat << EOF > ${temp_route}/grafana-route.yaml
+    if [[ -z "${IS_KIND_ENV}" ]]; then
+        # TODO(morvencao): remove the following two extra routes after after accessing metrics from grafana url with bearer token is supported
+        temp_route=$(mktemp -d /tmp/grafana.XXXXXXXXXX)
+        # install grafana route
+        cat << EOF > ${temp_route}/grafana-route.yaml
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
@@ -269,9 +262,8 @@ spec:
     kind: Service
     name: grafana
 EOF
-
-    # install observability-thanos-query-frontend route
-    cat << EOF > ${temp_route}/observability-thanos-query-frontend-route.yaml
+        # install observability-thanos-query-frontend route
+        cat << EOF > ${temp_route}/observability-thanos-query-frontend-route.yaml
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
@@ -285,11 +277,12 @@ spec:
     name: observability-thanos-query-frontend
   wildcardPolicy: None
 EOF
-    app_domain=$(kubectl -n openshift-ingress-operator get ingresscontrollers default -o jsonpath='{.status.domain}')
-    ${SED_COMMAND} "s~host: grafana$~host: grafana.$app_domain~g" ${temp_route}/grafana-route.yaml
-    kubectl -n ${OBSERVABILITY_NS} apply -f ${temp_route}/grafana-route.yaml
-    ${SED_COMMAND} "s~host: observability-thanos-query-frontend$~host: observability-thanos-query-frontend.$app_domain~g" ${temp_route}/observability-thanos-query-frontend-route.yaml
-    kubectl -n ${OBSERVABILITY_NS} apply -f ${temp_route}/observability-thanos-query-frontend-route.yaml
+        app_domain=$(kubectl -n openshift-ingress-operator get ingresscontrollers default -o jsonpath='{.status.domain}')
+        ${SED_COMMAND} "s~host: grafana$~host: grafana.$app_domain~g" ${temp_route}/grafana-route.yaml
+        kubectl -n ${OBSERVABILITY_NS} apply -f ${temp_route}/grafana-route.yaml
+        ${SED_COMMAND} "s~host: observability-thanos-query-frontend$~host: observability-thanos-query-frontend.$app_domain~g" ${temp_route}/observability-thanos-query-frontend-route.yaml
+        kubectl -n ${OBSERVABILITY_NS} apply -f ${temp_route}/observability-thanos-query-frontend-route.yaml
+    fi
 }
 
 delete_mco_operator() {

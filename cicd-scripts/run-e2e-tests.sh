@@ -3,7 +3,7 @@
 # Copyright (c) 2021 Red Hat, Inc.
 # Copyright Contributors to the Open Cluster Management project
 
-set -e
+set -euxo pipefail
 
 ./cicd-scripts/customize-mco.sh
 
