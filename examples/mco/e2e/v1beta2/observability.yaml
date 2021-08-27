@@ -3,6 +3,7 @@ kind: MultiClusterObservability
 metadata:
   name: observability
   annotations:
+    mco-thanos-without-resources-requests: "true"
 spec:
   advanced:
     retentionConfig:
