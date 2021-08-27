@@ -21,18 +21,6 @@ setup_kubectl_command() {
     fi
 }
 
-install_jq() {
-    if ! command -v jq >/dev/null 2>&1; then 
-        if [[ "$(uname)" == "Linux" ]]; then
-            curl -o jq -LO https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
-        elif [[ "$(uname)" == "Darwin" ]]; then
-            curl -o jq -LO https://github.com/stedolan/jq/releases/download/jq-1.6/jq-osx-amd64
-        fi
-        chmod +x ./jq
-        sudo mv ./jq /usr/local/bin/jq
-    fi
-}
-
 create_kind_cluster() {
     if ! command -v kind >/dev/null 2>&1; then 
         echo "This script will install kind (https://kind.sigs.k8s.io/) on your machine."
@@ -84,7 +72,6 @@ run_e2e_test() {
 
 deploy() {
     setup_kubectl_command
-    install_jq
     create_kind_cluster hub
     deploy_crds
     deploy_templates

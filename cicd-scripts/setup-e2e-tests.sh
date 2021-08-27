@@ -87,6 +87,15 @@ MANAGED_CLUSTER="cluster1"
 COMPONENTS="multicluster-observability-operator rbac-query-proxy metrics-collector endpoint-monitoring-operator grafana-dashboard-loader"
 COMPONENT_REPO="quay.io/open-cluster-management"
 
+if ! command -v jq &> /dev/null; then
+    if [[ "$(uname)" == "Linux" ]]; then
+        curl -o jq -L https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
+    elif [[ "$(uname)" == "Darwin" ]]; then
+        curl -o jq -L https://github.com/stedolan/jq/releases/download/jq-1.6/jq-osx-amd64
+    fi
+    chmod +x ./jq && mv ./jq ${ROOTDIR}/bin/jq
+fi
+
 # Use snapshot for target release. Use latest one if no branch info detected, or not a release branch
 BRANCH=""
 LATEST_SNAPSHOT=""
@@ -125,17 +134,6 @@ setup_kustomize() {
         fi
         tar xzvf kustomize_v3.8.7.tar.gz
         chmod +x ./kustomize && mv ./kustomize ${ROOTDIR}/bin/kustomize
-    fi
-}
-
-setup_jq() {
-    if ! command -v jq &> /dev/null; then
-        if [[ "$(uname)" == "Linux" ]]; then
-            curl -o jq -L https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
-        elif [[ "$(uname)" == "Darwin" ]]; then
-            curl -o jq -L https://github.com/stedolan/jq/releases/download/jq-1.6/jq-osx-amd64
-        fi
-        chmod +x ./jq && mv ./jq ${ROOTDIR}/bin/jq
     fi
 }
 
@@ -388,7 +386,6 @@ wait_for_deployment_ready() {
 execute() {
     setup_kubectl
     setup_kustomize
-    setup_jq
     if [[ "${ACTION}" == "install" ]]; then
         deploy_hub_spoke_core
         approve_csr_joinrequest

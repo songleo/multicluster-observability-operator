@@ -12,9 +12,7 @@ IP="$(cat "$SHARED_DIR/public_ip")"
 HOST="ec2-user@$IP"
 OPT=(-q -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no" -i "$KEY")
 
+ssh "${OPT[@]}" "$HOST" sudo yum install gcc git -y
 scp "${OPT[@]}" -r ../multicluster-observability-operator "$HOST:/tmp/multicluster-observability-operator"
-ssh "${OPT[@]}" "$HOST" env
-ssh "${OPT[@]}" "$HOST" echo "$PATH"
-ssh "${OPT[@]}" "$HOST" "sleep 100000"
-
 ssh "${OPT[@]}" "$HOST" "cd /tmp/multicluster-observability-operator/tests/run-in-kind && ./run-e2e-in-kind.sh" > >(tee "$ARTIFACT_DIR/run-e2e-in-kind.log") 2>&1
+sleep 10000
