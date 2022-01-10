@@ -33,7 +33,7 @@ deploy() {
       exit 1
   fi
   $sed_command "s~%(domain)s/grafana/$~%(domain)s/grafana-dev/~g" grafana-dev-config.ini
-  kubectl create secret generic grafana-dev-config -n "$obs_namespace" --from-file=grafana.ini=grafana-dev-config.ini
+  # kubectl create secret generic grafana-dev-config -n "$obs_namespace" --from-file=grafana.ini=grafana-dev-config.ini
 
   kubectl get deployment -n "$obs_namespace" -l app=multicluster-observability-grafana -o yaml > grafana-dev-deploy.yaml
   if [ $? -ne 0 ]; then
@@ -61,7 +61,7 @@ deploy() {
   $sed_command "s~  securityContext:.*$~  securityContext: {fsGroup: ${GROUP_ID}}~g" grafana-dev-deploy.yaml
   sed "s~- emptyDir: {}$~- persistentVolumeClaim:$            claimName: grafana-dev~g" grafana-dev-deploy.yaml > grafana-dev-deploy.yaml.bak
   tr $ '\n' < grafana-dev-deploy.yaml.bak > grafana-dev-deploy.yaml
-  kubectl apply -f grafana-dev-deploy.yaml
+  # kubectl apply -f grafana-dev-deploy.yaml
 
   kubectl get svc -n "$obs_namespace" -l app=multicluster-observability-grafana -o yaml > grafana-dev-svc.yaml
   if [ $? -ne 0 ]; then
@@ -74,7 +74,7 @@ deploy() {
   # For OCP 4.7, we should remove clusterIPs filed and IPs
   $sed_command "s~clusterIPs:.*$~ ~g" grafana-dev-svc.yaml
   $sed_command 's/\- [0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}//g' grafana-dev-svc.yaml
-  kubectl apply -f grafana-dev-svc.yaml
+  # kubectl apply -f grafana-dev-svc.yaml
 
   kubectl get ingress -n "$obs_namespace" grafana -o yaml > grafana-dev-ingress.yaml
   if [ $? -ne 0 ]; then
@@ -84,7 +84,7 @@ deploy() {
   $sed_command "s~name: grafana$~name: grafana-dev~g" grafana-dev-ingress.yaml
   $sed_command "s~serviceName: grafana$~serviceName: grafana-dev~g" grafana-dev-ingress.yaml
   $sed_command "s~path: /grafana$~path: /grafana-dev~g" grafana-dev-ingress.yaml
-  kubectl apply -f grafana-dev-ingress.yaml
+  # kubectl apply -f grafana-dev-ingress.yaml
   
   cat >grafana-pvc.yaml <<EOL
 kind: PersistentVolumeClaim
@@ -106,15 +106,15 @@ EOL
       exit 1
   fi
   $sed_command "s~gp2$~${storage_class}~g" grafana-pvc.yaml
-  kubectl apply -f grafana-pvc.yaml
+  # kubectl apply -f grafana-pvc.yaml
 
   # clean all tmp files
-  rm -rf grafana-dev-deploy.yaml* grafana-dev-svc.yaml* grafana-dev-ingress.yaml* grafana-dev-config.ini* grafana-pvc.yaml*
+  # rm -rf grafana-dev-deploy.yaml* grafana-dev-svc.yaml* grafana-dev-ingress.yaml* grafana-dev-config.ini* grafana-pvc.yaml*
 
   # delete ownerReferences
-  kubectl -n "$obs_namespace" patch deployment grafana-dev -p '{"metadata": {"ownerReferences":null}}'
-  kubectl -n "$obs_namespace" patch svc grafana-dev -p '{"metadata": {"ownerReferences":null}}'
-  kubectl -n "$obs_namespace" patch ingress grafana-dev -p '{"metadata": {"ownerReferences":null}}'
+  # kubectl -n "$obs_namespace" patch deployment grafana-dev -p '{"metadata": {"ownerReferences":null}}'
+  # kubectl -n "$obs_namespace" patch svc grafana-dev -p '{"metadata": {"ownerReferences":null}}'
+  # kubectl -n "$obs_namespace" patch ingress grafana-dev -p '{"metadata": {"ownerReferences":null}}'
 }
 
 clean() {
