@@ -1,0 +1,42 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2022-01-10T12:15:35Z"
+    labels:
+      app: multicluster-observability-grafana-dev
+    name: grafana-dev
+    namespace: open-cluster-management-observability
+    ownerReferences:
+    - apiVersion: observability.open-cluster-management.io/v1beta2
+      blockOwnerDeletion: true
+      controller: true
+      kind: MultiClusterObservability
+      name: observability
+      uid: 7b243681-0e43-4807-b38e-122e5f4bd133
+    resourceVersion: "182758"
+    uid: 776a07d3-62b3-4b7d-984d-42019f9025da
+  spec:
+     
+     
+    - 172.30.109.242
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: grafana-http
+      port: 3001
+      protocol: TCP
+      targetPort: 3001
+    selector:
+      app: multicluster-observability-grafana-dev
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

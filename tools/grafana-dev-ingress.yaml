@@ -1,0 +1,35 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    ingress.open-cluster-management.io/rewrite-target: /
+    kubernetes.io/ingress.class: ingress-open-cluster-management
+  creationTimestamp: "2022-01-10T12:15:35Z"
+  generation: 1
+  name: grafana-dev
+  namespace: open-cluster-management-observability
+  ownerReferences:
+  - apiVersion: observability.open-cluster-management.io/v1beta2
+    blockOwnerDeletion: true
+    controller: true
+    kind: MultiClusterObservability
+    name: observability
+    uid: 7b243681-0e43-4807-b38e-122e5f4bd133
+  resourceVersion: "185822"
+  uid: 7fba3d7d-2d0f-4e6e-a502-28220dc38243
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: grafana-dev
+            port:
+              number: 3001
+        path: /grafana-dev
+        pathType: ImplementationSpecific
+status:
+  loadBalancer:
+    ingress:
+    - ip: 10.0.144.23
+    - ip: 10.0.169.93
