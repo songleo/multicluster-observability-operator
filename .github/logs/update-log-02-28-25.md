@@ -1,0 +1,288 @@
+### Generated logs from GitHub Action: [13582687101](https://github.com/songleo/multicluster-observability-operator/actions/runs/13582687101)
+
+- go: downloading github.com/go-kit/kit v0.11.0
+- go: downloading github.com/prometheus/client_model v0.2.0
+- go: downloading github.com/prometheus/prometheus v1.8.2-0.20210811141203-dcb07e8eac34
+- go: downloading github.com/prometheus/client_golang v1.11.0
+- go: downloading github.com/prometheus/client_model v0.6.1
+- go: downloading github.com/prometheus/client_golang v1.21.0
+- go: downloading github.com/go-kit/log v0.1.0
+- go: downloading github.com/go-kit/log v0.2.1
+- go: downloading github.com/oklog/run v1.1.0
+- go: downloading github.com/go-kit/kit v0.13.0
+- go: downloading github.com/prometheus/common v0.30.0
+- go: downloading github.com/spf13/cobra v1.2.1
+- go: downloading github.com/spf13/cobra v1.9.1
+- go: downloading k8s.io/apimachinery v0.22.1
+- go: downloading github.com/cenkalti/backoff v2.2.1+incompatible
+- go: downloading k8s.io/apimachinery v0.32.2
+- go: downloading github.com/prometheus/common v0.62.0
+- go: downloading github.com/gogo/protobuf v1.3.2
+- go: downloading github.com/golang/snappy v0.0.4
+- go: downloading github.com/pkg/errors v0.9.1
+- go: downloading k8s.io/client-go v0.22.1
+- go: downloading sigs.k8s.io/controller-runtime v0.10.0
+- go: downloading sigs.k8s.io/controller-runtime v0.20.2
+- go: downloading github.com/cloudflare/cfssl v1.6.0
+- go: downloading github.com/spf13/pflag v1.0.5
+- go: downloading k8s.io/klog v1.0.0
+- go: downloading github.com/spf13/pflag v1.0.6
+- go: downloading k8s.io/api v0.22.1
+- go: downloading github.com/cloudflare/cfssl v1.6.5
+- go: downloading k8s.io/api v0.32.2
+- go: downloading gopkg.in/yaml.v2 v2.4.0
+- go: downloading github.com/IBM/controller-filtered-cache v0.3.3
+- go: downloading github.com/openshift/api v0.0.0-20210331193751-3acddb19d360
+- go: downloading github.com/IBM/controller-filtered-cache v0.3.6
+- go: downloading github.com/prometheus-operator/prometheus-operator/pkg/apis/monitoring v0.48.1
+- go: downloading github.com/prometheus-operator/prometheus-operator/pkg/apis/monitoring v0.80.1
+- go: downloading github.com/prometheus-operator/prometheus-operator v0.80.1
+- go: downloading open-cluster-management.io/api v0.0.0-20210916013819-2e58cdb938f9
+- go: downloading sigs.k8s.io/kustomize/v3 v3.3.1
+- go: downloading open-cluster-management.io/api v0.15.0
+- go: downloading sigs.k8s.io/kustomize v2.0.3+incompatible
+- go: downloading github.com/golang/protobuf v1.5.2
+- go: downloading github.com/golang/protobuf v1.5.4
+- go: downloading github.com/openshift/client-go v0.0.0-20210916133943-9acee1a0fb83
+- go: downloading open-cluster-management.io/addon-framework v0.0.0-20211014025435-1f42884cdd53
+- go: downloading open-cluster-management.io/addon-framework v0.11.0
+- go: downloading github.com/ghodss/yaml v1.0.1-0.20190212211648-25d852aebe32
+- go: downloading github.com/openshift/cluster-monitoring-operator v0.1.1-0.20210611103744-7168290cd660
+- go: downloading github.com/openshift/client-go v0.0.0-20250131180035-f7ec47e2d87a
+- go: downloading k8s.io/kubectl v0.21.2
+- go: downloading k8s.io/kubectl v0.32.2
+- go: downloading github.com/stolostron/multiclusterhub-operator v0.0.0-20220106205009-2af6f43fd562
+- go: downloading github.com/stolostron/observatorium-operator v0.0.0-20220307015247-f9eb849e218e
+- go: downloading github.com/stolostron/observatorium-operator v0.0.0-20250227082356-589300b73063
+- go: downloading sigs.k8s.io/kube-storage-version-migrator v0.0.4
+- go: downloading sigs.k8s.io/kube-storage-version-migrator v0.0.5
+- go: downloading github.com/go-logr/logr v0.4.0
+- go: downloading github.com/go-logr/logr v1.4.2
+- go: downloading k8s.io/apiextensions-apiserver v0.22.1
+- go: downloading k8s.io/apiextensions-apiserver v0.32.2
+- go: downloading github.com/prometheus-operator/prometheus-operator/pkg/client v0.47.1
+- go: downloading github.com/prometheus-operator/prometheus-operator/pkg/client v0.80.1
+- go: downloading sigs.k8s.io/yaml v1.2.0
+- go: downloading sigs.k8s.io/yaml v1.4.0
+- go: downloading github.com/prometheus-community/prom-label-proxy v0.3.0
+- go: downloading sigs.k8s.io/kustomize/api v0.8.8
+- go: downloading github.com/prometheus-community/prom-label-proxy v0.11.0
+- go: downloading sigs.k8s.io/kustomize/api v0.19.0
+- go: downloading github.com/stretchr/testify v1.7.0
+- go: downloading github.com/stretchr/testify v1.10.0
+- go: downloading github.com/onsi/ginkgo v1.16.4
+- go: downloading github.com/onsi/ginkgo v1.16.5
+- go: downloading github.com/onsi/gomega v1.16.0
+- go: downloading github.com/onsi/gomega v1.36.2
+- go: downloading github.com/prometheus/alertmanager v0.22.2
+- go: downloading github.com/hashicorp/go-version v1.3.0
+- go: downloading github.com/hashicorp/go-version v1.7.0
+- go: downloading github.com/prometheus/alertmanager v0.28.0
+- go: downloading github.com/beorn7/perks v1.0.1
+- go: downloading github.com/cespare/xxhash/v2 v2.1.1
+- go: downloading github.com/prometheus/procfs v0.6.0
+- go: downloading github.com/cespare/xxhash v1.1.0
+- go: downloading golang.org/x/sys v0.0.0-20220111092808-5a964db01320
+- go: downloading github.com/cespare/xxhash/v2 v2.3.0
+- go: downloading github.com/go-logfmt/logfmt v0.5.0
+- go: downloading github.com/go-logfmt/logfmt v0.6.0
+- go: downloading github.com/prometheus/procfs v0.15.1
+- go: downloading github.com/matttproud/golang_protobuf_extensions v1.0.2-0.20181231171920-c182affec369
+- go: downloading github.com/matttproud/golang_protobuf_extensions v1.0.4
+- go: downloading github.com/inconshreveable/mousetrap v1.0.0
+- go: downloading github.com/inconshreveable/mousetrap v1.1.0
+- go: downloading github.com/edsrzf/mmap-go v1.0.0
+- go: downloading golang.org/x/sys v0.30.0
+- go: downloading github.com/opentracing/opentracing-go v1.2.0
+- go: downloading github.com/edsrzf/mmap-go v1.2.0
+- go: downloading github.com/uber/jaeger-client-go v2.29.1+incompatible
+- go: downloading github.com/uber/jaeger-client-go v2.30.0+incompatible
+- go: downloading github.com/google/gofuzz v1.2.0
+- go: downloading github.com/imdario/mergo v0.3.12
+- go: downloading github.com/imdario/mergo v1.0.1
+- go: downloading golang.org/x/term v0.0.0-20210220032956-6a3ed077a48d
+- go: downloading golang.org/x/term v0.29.0
+- go: downloading k8s.io/klog/v2 v2.10.0
+- go: downloading k8s.io/klog/v2 v2.130.1
+- go: downloading github.com/evanphx/json-patch v4.11.0+incompatible
+- go: downloading github.com/evanphx/json-patch v5.9.11+incompatible
+- go: downloading github.com/google/uuid v1.2.0
+- go: downloading github.com/google/uuid v1.6.0
+- go: downloading sigs.k8s.io/structured-merge-diff/v4 v4.1.2
+- go: downloading sigs.k8s.io/structured-merge-diff/v4 v4.5.0
+- go: downloading sigs.k8s.io/structured-merge-diff v1.0.2
+- go: downloading k8s.io/utils v0.0.0-20210802155522-efc7438f0176
+- go: downloading k8s.io/utils v0.0.0-20241210054802-24370beab758
+- go: downloading github.com/gobuffalo/flect v0.2.2
+- go: downloading github.com/gobuffalo/flect v1.0.3
+- go: downloading github.com/go-logr/zapr v0.4.0
+- go: downloading go.uber.org/zap v1.19.0
+- go: downloading github.com/go-logr/zapr v1.3.0
+- go: downloading go.uber.org/zap v1.27.0
+- go: downloading google.golang.org/protobuf v1.27.1
+- go: downloading google.golang.org/protobuf v1.36.5
+- go: downloading golang.org/x/net v0.0.0-20211209124913-491a49abca63
+- go: downloading golang.org/x/net v0.35.0
+- go: downloading github.com/google/go-cmp v0.5.6
+- go: downloading github.com/google/go-cmp v0.7.0
+- go: downloading github.com/openshift/library-go v0.0.0-20210916194400-ae21aab32431
+- go: downloading k8s.io/apiserver v0.22.1
+- go: downloading k8s.io/kube-aggregator v0.22.1
+- go: downloading k8s.io/kube-aggregator v0.32.2
+- go: downloading k8s.io/apiserver v0.32.2
+- go: downloading github.com/brancz/locutus v0.0.0-20210511124350-7a84f4d1bcb3
+- go: downloading gomodules.xyz/jsonpatch/v2 v2.2.0
+- go: downloading github.com/brancz/locutus v0.1.0
+- go: downloading gomodules.xyz/jsonpatch/v2 v2.4.0
+- go: downloading gomodules.xyz/jsonpatch v1.0.1
+- go: downloading gopkg.in/inf.v0 v0.9.1
+- go: downloading github.com/zmap/zlint/v3 v3.0.0
+- go: downloading github.com/zmap/zlint/v3 v3.6.5
+- go: downloading github.com/zmap/zlint v1.1.0
+- go: downloading github.com/google/certificate-transparency-go v1.0.21
+- go: downloading github.com/google/certificate-transparency-go v1.3.1
+- go: downloading github.com/zmap/zcrypto v0.0.0-20201128221613-3719af1573cf
+- go: downloading github.com/zmap/zcrypto v0.0.0-20250129210703-03c45d0bae98
+- go: downloading golang.org/x/oauth2 v0.0.0-20210628180205-a41e5a781914
+- go: downloading golang.org/x/oauth2 v0.27.0
+- go: downloading github.com/mwitkow/go-conntrack v0.0.0-20190716064945-2f068394615f
+- go: downloading sigs.k8s.io/kustomize/kyaml v0.10.17
+- go: downloading github.com/davecgh/go-spew v1.1.1
+- go: downloading github.com/pmezard/go-difflib v1.0.0
+- go: downloading gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+- go: downloading gopkg.in/yaml.v3 v3.0.1
+- go: downloading github.com/efficientgo/tools/core v0.0.0-20210201224146-3d78f4d30648
+- go: downloading github.com/go-openapi/runtime v0.19.28
+- go: downloading github.com/go-openapi/runtime v0.28.0
+- go: downloading sigs.k8s.io/kustomize/kyaml v0.19.0
+- go: downloading github.com/go-openapi/strfmt v0.20.1
+- go: downloading github.com/go-openapi/strfmt v0.23.0
+- go: downloading github.com/efficientgo/tools v0.1.0
+- go: downloading github.com/efficientgo/tools/core v0.0.0-20230505153745-6b7392939a60
+- go: downloading github.com/alecthomas/units v0.0.0-20210208195552-ff826a37aa15
+- go: downloading github.com/alecthomas/units v0.0.0-20240927000941-0f3dac36c52b
+- go: downloading github.com/go-openapi/errors v0.20.0
+- go: downloading github.com/go-openapi/errors v0.22.0
+- go: downloading github.com/go-openapi/swag v0.19.15
+- go: downloading github.com/go-openapi/swag v0.23.0
+- go: downloading github.com/go-openapi/validate v0.20.2
+- go: downloading github.com/go-openapi/validate v0.24.0
+- go: downloading github.com/oklog/ulid v1.3.1
+- go: downloading go.uber.org/atomic v1.9.0
+- go: downloading go.uber.org/atomic v1.11.0
+- go: downloading golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
+- go: downloading golang.org/x/sync v0.11.0
+- go: downloading github.com/uber/jaeger-lib v2.4.1+incompatible
+- go: downloading go.uber.org/goleak v1.1.10
+- go: downloading go.uber.org/goleak v1.3.0
+- go: downloading k8s.io/kube-openapi v0.0.0-20210305001622-591a79e4bda7
+- go: downloading golang.org/x/time v0.0.0-20211116232009-f0f3c7e86c11
+- go: downloading golang.org/x/time v0.10.0
+- go: downloading github.com/json-iterator/go v1.1.11
+- go: downloading github.com/json-iterator/go v1.1.12
+- go: downloading github.com/googleapis/gnostic v0.5.5
+- go: downloading github.com/googleapis/gnostic v0.7.0
+- go: downloading go.uber.org/multierr v1.6.0
+- go: downloading go.uber.org/multierr v1.11.0
+- go: downloading github.com/Azure/go-autorest/autorest v0.11.19
+- go: downloading github.com/Azure/go-autorest/autorest/adal v0.9.14
+- go: downloading github.com/Azure/go-autorest v14.2.0+incompatible
+- go: downloading github.com/Azure/go-autorest/autorest/adal v0.9.24
+- go: downloading github.com/Azure/go-autorest/autorest v0.11.30
+- go: downloading github.com/fsnotify/fsnotify v1.5.1
+- go: downloading github.com/fsnotify/fsnotify v1.8.0
+- go: downloading golang.org/x/crypto v0.0.0-20220112180741-5e0467b6c7ce
+- go: downloading golang.org/x/crypto v0.35.0
+- go: downloading k8s.io/component-base v0.22.1
+- go: downloading k8s.io/component-base v0.32.2
+- go: downloading github.com/weppos/publicsuffix-go v0.13.0
+- go: downloading github.com/weppos/publicsuffix-go v0.40.2
+- go: downloading github.com/jmoiron/sqlx v1.3.1
+- go: downloading github.com/jmoiron/sqlx v1.4.0
+- go: downloading cloud.google.com/go v0.87.0
+- go: downloading cloud.google.com/go v0.118.3
+- go: downloading cloud.google.com/go/compute/metadata v0.6.0
+- go: downloading cloud.google.com/go/compute v1.34.0
+- go: downloading google.golang.org/appengine v1.6.7
+- go: downloading google.golang.org/appengine v1.6.8
+- go: downloading github.com/jpillora/backoff v1.0.0
+- go: downloading github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da
+- go: downloading github.com/golang/groupcache v0.0.0-20241129210726-2c02b8208cf8
+- go: downloading github.com/go-openapi/spec v0.19.5
+- go: downloading github.com/asaskevich/govalidator v0.0.0-20200907205600-7a23bdc65eef
+- go: downloading github.com/mitchellh/mapstructure v1.4.1
+- go: downloading github.com/mitchellh/mapstructure v1.5.0
+- go: downloading go.mongodb.org/mongo-driver v1.5.1
+- go: downloading github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2
+- go: downloading go.mongodb.org/mongo-driver v1.17.3
+- go: downloading github.com/nxadm/tail v1.4.8
+- go: downloading github.com/nxadm/tail v1.4.11
+- go: downloading github.com/modern-go/reflect2 v1.0.1
+- go: downloading github.com/modern-go/reflect2 v1.0.2
+- go: downloading github.com/mailru/easyjson v0.7.6
+- go: downloading github.com/mailru/easyjson v0.9.0
+- go: downloading github.com/go-openapi/analysis v0.19.5
+- go: downloading github.com/go-openapi/jsonpointer v0.19.5
+- go: downloading github.com/go-openapi/loads v0.19.5
+- go: downloading github.com/go-openapi/jsonpointer v0.21.0
+- go: downloading github.com/dennwc/varint v1.0.0
+- go: downloading golang.org/x/lint v0.0.0-20210508222113-6edffad5e616
+- go: downloading github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
+- go: downloading golang.org/x/lint v0.0.0-20241112194109-818c5a804067
+- go: downloading github.com/Azure/go-autorest/autorest/date v0.3.0
+- go: downloading github.com/Azure/go-autorest/autorest/date v0.3.1
+- go: downloading github.com/Azure/go-autorest/logger v0.2.1
+- go: downloading github.com/Azure/go-autorest/logger v0.2.2
+- go: downloading github.com/Azure/go-autorest/tracing v0.6.0
+- go: downloading github.com/form3tech-oss/jwt-go v3.2.5+incompatible
+- go: downloading github.com/Azure/go-autorest/tracing v0.6.1
+- go: downloading golang.org/x/text v0.3.5
+- go: downloading github.com/blang/semver v3.5.1+incompatible
+- go: downloading github.com/robfig/cron v1.2.0
+- go: downloading github.com/go-openapi/jsonreference v0.19.5
+- go: downloading github.com/emicklei/go-restful v2.14.2+incompatible
+- go: downloading github.com/go-openapi/jsonreference v0.21.0
+- go: downloading github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510
+- go: downloading github.com/emicklei/go-restful v2.16.0+incompatible
+- go: downloading github.com/go-errors/errors v1.0.1
+- go: downloading github.com/go-errors/errors v1.5.1
+- go: downloading gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7
+- go: downloading github.com/josharian/intern v1.0.0
+- go: downloading github.com/PuerkitoBio/purell v1.1.1
+- go: downloading github.com/monochromegane/go-gitignore v0.0.0-20200626010858-205db1a8cc00
+- go: downloading github.com/PuerkitoBio/purell v1.2.1
+- go: downloading github.com/xlab/treeprint v1.1.0
+- go: downloading github.com/xlab/treeprint v1.2.0
+- go: downloading github.com/go-stack/stack v1.8.0
+- go: downloading github.com/go-stack/stack v1.8.1
+- go: downloading golang.org/x/tools v0.1.5
+- go: downloading github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578
+- go: downloading golang.org/x/tools v0.30.0
+- go: downloading go.starlark.net v0.0.0-20200306205701-8dd3e2ee1dd5
+- go: downloading go.starlark.net v0.0.0-20250225190231-0d3f41d403af
+- go get all: module github.com/prometheus/common@upgrade found (v0.62.0), but does not contain package github.com/prometheus/common/internal/bitbucket.org/ww/goautoneg
+- go get all: module golang.org/x/crypto@upgrade found (v0.35.0), but does not contain package golang.org/x/crypto/ed25519/internal/edwards25519
+- go get all: module golang.org/x/oauth2@upgrade found (v0.27.0), but does not contain package golang.org/x/oauth2/google/internal/externalaccount
+- go get all: module golang.org/x/sys@upgrade found (v0.30.0), but does not contain package golang.org/x/sys/internal/unsafeheader
+- go get all: module golang.org/x/tools@upgrade found (v0.30.0), but does not contain package golang.org/x/tools/go/internal/gcimporter
+- go get all: module k8s.io/api@upgrade found (v0.32.2), but does not contain package k8s.io/api/flowcontrol/v1alpha1
+- go get all: module k8s.io/apimachinery@upgrade found (v0.32.2), but does not contain package k8s.io/apimachinery/pkg/util/clock
+- go get all: module k8s.io/apiserver@upgrade found (v0.32.2), but does not contain package k8s.io/apiserver/pkg/apis/audit/v1alpha1
+- go get all: module k8s.io/apiserver@upgrade found (v0.32.2), but does not contain package k8s.io/apiserver/pkg/apis/audit/v1beta1
+- go get all: module open-cluster-management.io/addon-framework@upgrade found (v0.11.0), but does not contain package open-cluster-management.io/addon-framework/pkg/addonmanager/controllers/addoninstall
+- go get all: module open-cluster-management.io/addon-framework@upgrade found (v0.11.0), but does not contain package open-cluster-management.io/addon-framework/pkg/addonmanager/controllers/clustermanagement
+- go get all: module sigs.k8s.io/controller-runtime@upgrade found (v0.20.2), but does not contain package sigs.k8s.io/controller-runtime/pkg/config/v1alpha1
+- go get all: module sigs.k8s.io/controller-runtime@upgrade found (v0.20.2), but does not contain package sigs.k8s.io/controller-runtime/pkg/ratelimiter
+- go get all: module sigs.k8s.io/controller-runtime@upgrade found (v0.20.2), but does not contain package sigs.k8s.io/controller-runtime/pkg/runtime/inject
+- go get all: module sigs.k8s.io/controller-runtime@upgrade found (v0.20.2), but does not contain package sigs.k8s.io/controller-runtime/pkg/source/internal
+- go get all: module sigs.k8s.io/kustomize/api@upgrade found (v0.19.0), but does not contain package sigs.k8s.io/kustomize/api/filters/prefixsuffix
+- go get all: module sigs.k8s.io/kustomize/api@upgrade found (v0.19.0), but does not contain package sigs.k8s.io/kustomize/api/image
+- go get all: module sigs.k8s.io/kustomize/api@upgrade found (v0.19.0), but does not contain package sigs.k8s.io/kustomize/api/konfig/builtinpluginconsts
+- go get all: module sigs.k8s.io/kustomize/api@upgrade found (v0.19.0), but does not contain package sigs.k8s.io/kustomize/api/loader
+- go get all: module sigs.k8s.io/kustomize/api@upgrade found (v0.19.0), but does not contain package sigs.k8s.io/kustomize/api/resid
+- go get all: module sigs.k8s.io/kustomize/kyaml@upgrade found (v0.19.0), but does not contain package sigs.k8s.io/kustomize/kyaml/fn/runtime/starlark
+- go get all: module sigs.k8s.io/kustomize/kyaml@upgrade found (v0.19.0), but does not contain package sigs.k8s.io/kustomize/kyaml/internal/forked/github.com/qri-io/starlib/util
+- go get all: module sigs.k8s.io/kustomize/kyaml@upgrade found (v0.19.0), but does not contain package sigs.k8s.io/kustomize/kyaml/openapi/kubernetesapi/v1204
+
+#### Failed to update the outdated go modules dependencies successfully. Manual updating is needed to resolve the dependecies issue.
+---
